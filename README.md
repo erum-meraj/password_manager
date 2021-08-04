@@ -4,6 +4,7 @@ Pages required: <br/>
      home <br/> 
      sign up<br/> 
      pw entering<br/> 
+     password view <br/> 
 <br/> 
 Objective :<br/> 
       to create an app which allows us to store passwords and their ASSOCIATED links. <br/> 
@@ -18,3 +19,5 @@ Data to be stored in db:<br/>
         password of a website<br/> 
         link of the website <br/> 
         additional notes
+        
+i hate tkinter 
