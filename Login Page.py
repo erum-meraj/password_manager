@@ -57,7 +57,8 @@ entry_username.place(x=80  , y =360 , width = 270)
 password=tk.Label(frame,text = "Password", font=("times new roman" , 24 , "bold") , fg = "black", bg = "lightpink")
 password.place(x= 80  , y =420)
 
-entry_password = tk.Entry(frame, font=('Bookman Old Style', 18), bg="white", fg="black")
+bullet = "\u2022" 
+entry_password = tk.Entry(frame, font=('Bookman Old Style', 18), bg="white", fg="black", show=bullet)
 entry_password.place(x= 80  , y =450 , width = 270)
 
 button_login = tk.Button(frame, text="Login", font=('Bookman Old Style', 14), bg='#ffffff', fg="black" , command=lambda: user_record_check(entry_username.get(), entry_password.get()))
