@@ -2,15 +2,41 @@ import tkinter as tk
 import requests # Download this library using pip install request!!!!!!!
 from tkinter import font
 import webbrowser
+import mysql.connector as sql
 from PIL import Image, ImageTk # Download this library using pip install Pillow!!!!!
+
+
+#root app
 root = tk.Tk()
 root.title("Password Manager")
 root.configure(background = "mediumturquoise")
 root.minsize(height=982, width=700)
 
+#sql connection 
+con = sql.connect(host = 'localhost', user = 'root', password = 'erummeraj', database = 'pw-manager')
+cur = con.cursor()
+
+
+#functions
 def hello():
     print("hello")
 
+#login check
+def user_record_check(name, passw):
+    name_entered = name
+    pw_entered = passw
+    #query = "SELECT username, password, COUNT(*) FROM users WHERE username = {} and password = {}".format(name_entered, pw_entered)
+    query = "select username, password, count(*) from users where username = '{}' and password = '{}'".format(name_entered, pw_entered)
+    cur.execute(query)
+    row_count = cur.rowcount
+    if row_count == 0:
+        print ("It Does Not Exist")
+    else:
+        print("Exists")
+    con.close;
+
+
+#layout
 frame = tk.Frame(root, bg="lightpink", bd=5)
 frame.place(x=115 , y = 170 , height = 630 , width =450)
 
@@ -31,10 +57,10 @@ entry_username.place(x=80  , y =360 , width = 270)
 password=tk.Label(frame,text = "Password", font=("times new roman" , 24 , "bold") , fg = "black", bg = "lightpink")
 password.place(x= 80  , y =420)
 
-entry_username = tk.Entry(frame, font=('Bookman Old Style', 18), bg="white", fg="black")
-entry_username.place(x= 80  , y =450 , width = 270)
+entry_password = tk.Entry(frame, font=('Bookman Old Style', 18), bg="white", fg="black")
+entry_password.place(x= 80  , y =450 , width = 270)
 
-button_login = tk.Button(frame, text="Login", font=('Bookman Old Style', 14), bg='#ffffff', fg="black" )
+button_login = tk.Button(frame, text="Login", font=('Bookman Old Style', 14), bg='#ffffff', fg="black" , command=lambda: user_record_check(entry_username.get(), entry_password.get()))
 button_login.place(x=155,y=510, height=35, width=120)
 print("Don't have an account?? \033[4mSign Up\033[0m")
 link1 = tk.Label(frame, text="Don't have an account?? Sign Up", fg="#787A91", font=('Bookman Old Style', 14,'underline'), cursor="hand2", bg= "lightpink")
@@ -43,6 +69,11 @@ link1.bind("<Button-1>", lambda e: hello())
 
 
 #sign_up_redirect
+
+
+root.mainloop()
+
+
 
 '''
 frame = tk.Frame(root, bg="paleturquoise", bd=5)
@@ -80,7 +111,6 @@ weather_icon.place(relx=.6, rely=0, relwidth=1, relheight=0.5)
 
 
 
-root.mainloop()
 
 
 
