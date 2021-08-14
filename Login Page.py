@@ -6,17 +6,17 @@ from PIL import Image, ImageTk # Download this library using pip install Pillow!
 root = tk.Tk()
 root.title("Password Manager")
 root.configure(background = "mediumturquoise")
-root.minsize(height=1056, width=1441)
+root.minsize(height=982, width=700)
 
 def hello():
     print("hello")
 
 frame = tk.Frame(root, bg="lightpink", bd=5)
-frame.place(x=500 , y = 170 , height = 630 , width =450)
+frame.place(x=115 , y = 170 , height = 630 , width =450)
 
 background_image= tk.PhotoImage(file=r'/Users/momeraj/Documents/erum/learning-python-master/12th/Password-Manager-master/Logo-removebg-preview.png')
 background_label = tk.Label(root, image=background_image, bg = "lightpink")
-background_label.place(x=725, y=180, width=400, height=200, anchor='n')
+background_label.place(x=140, y=180, width=400, height=200)
 
 
 welcomeback=tk.Label(frame,text = "WELCOME BACK!", font=("times new roman" , 35 , "bold") , fg = "black", bg = "lightpink")
