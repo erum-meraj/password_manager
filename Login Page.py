@@ -14,12 +14,17 @@ root.minsize(height=982, width=700)
 
 #sql connection 
 con = sql.connect(host = 'localhost', user = 'root', password = 'erummeraj', database = 'pw-manager')
-cur = con.cursor()
+cur = con.cursor(buffered=True)
 
 
-#functions
-def hello():
+#FUNCTIONS!!!!
+
+
+
+#sign_up_redirect_function
+def sign_up_redirect():
     print("hello")
+
 
 #login check
 def user_record_check(name, passw):
@@ -34,14 +39,13 @@ def user_record_check(name, passw):
     else:
         print("Exists")
     con.close;
+    return
 
 
 #layout
 frame = tk.Frame(root, bg="peachpuff", bd=5)
 frame.place(x=115 , y = 170 , height = 630 , width =450)
 
-
-#enter your own image pathway 
 background_image= tk.PhotoImage(file=r'/Users/momeraj/Documents/erum/learning-python-master/12th/Password-Manager-master/Logo-removebg-preview.png')
 background_label = tk.Label(root, image=background_image, bg = "peachpuff")
 background_label.place(x=140, y=180, width=400, height=200)
@@ -68,7 +72,7 @@ button_login.place(x=155,y=510, height=35, width=120)
 print("Don't have an account?? \033[4mSign Up\033[0m")
 link1 = tk.Label(frame, text="Don't have an account?? Sign Up", fg="#787A91", font=('Bookman Old Style', 14,'underline'), cursor="hand2", bg= "peachpuff")
 link1.place(x=120,y=560)
-link1.bind("<Button-1>", lambda e: hello())
+link1.bind("<Button-1>", lambda e: sign_up_redirect())
 
 
 #sign_up_redirect
@@ -107,16 +111,4 @@ results.place(relwidth=1, relheight=1)
 weather_icon = tk.Canvas(results, bg='#ffffff', bd=0, highlightthickness=0)
 weather_icon.place(relx=.6, rely=0, relwidth=1, relheight=0.5)
 
-
-
 '''
-
-
-
-
-
-
-
-
-
-
