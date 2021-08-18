@@ -1,4 +1,4 @@
-# password_manager
+# password_manager  (run the index file to start the app)
 Pages required: <br/> 
      log in<br/> 
      home <br/> 
