@@ -18,7 +18,7 @@ cur = con.cursor(buffered=True)
 
 #sign_up_redirect_function
 def sign_up_redirect():
-    print("hello")
+    import signup
 
 
 #layout
@@ -46,7 +46,7 @@ bullet = "\u2022"
 entry_password = tk.Entry(frame, font=('Bookman Old Style', 18), bg="white", fg="black", show=bullet)
 entry_password.place(x= 80  , y =450 , width = 270)
 
-button_login = tk.Button(frame, text="Login", font=('Bookman Old Style', 14), bg='#ffffff', fg="black" , command=lambda: user_record_check(entry_username.get(), entry_password.get(), cur, con))
+button_login = tk.Button(frame, text="Login", font=('Bookman Old Style', 14), bg='#ffffff', fg="black" , command=lambda: user_record_check(entry_username.get(), entry_password.get(), cur))
 button_login.place(x=155,y=510, height=35, width=120)
 
 link1 = tk.Label(frame, text="Don't have an account?? Sign Up", fg="#787A91", font=('Bookman Old Style', 14,'underline'), cursor="hand2", bg= "#FADCD9")
