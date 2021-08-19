@@ -1,23 +1,8 @@
-# password_manager  (run the index file to start the app)
-Pages required: <br/> 
-     log in<br/> 
-     home <br/> 
-     sign up<br/> 
-     pw entering<br/> 
-     password view <br/> 
-<br/> 
-Objective :<br/> 
-      to create an app which allows us to store passwords and their ASSOCIATED links. <br/> 
-      <br/> 
-COmponents planned:<br/> 
-      display in form of table <br/> 
-      encryption while storing in database <br/> 
-      multiple account creation <br/> 
-<br/> 
-Data to be stored in db:<br/> 
-        username <br/> 
-        password of a website<br/> 
-        link of the website <br/> 
-        additional notes
-        
-i hate tkinter 
+# Password-Manager
+A password manager is created in python using tkinter and sqlite database to manage passwords for several applications. Passwords can be stored for various applications and details required for maintaining the passwords are application name, url, email id and password.
+
+#Future Possible Enhancements:
+1. GUI can be enhanced in a better way to display the results.
+2. Encryption can be added to encrypt the stored information.
+3. Search feature can be added.
+4. User authentication can also be added.
