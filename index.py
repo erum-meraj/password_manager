@@ -30,7 +30,7 @@ background_label = tk.Label(root, image=background_image, bg = "#FADCD9")
 background_label.place(x=140, y=180, width=400, height=200)
 
 
-welcomeback=tk.Label(frame,text = "WELCOME BACK!", font=("times new roman" , 35 , "bold") , fg = "black", bg = "#FADCD9")
+welcomeback=tk.Label(frame,text = "WELCOME BACK!", font=("times new roman" , 35 , "bold"-) , fg = "black", bg = "#FADCD9")
 welcomeback.place(x=70 , y =260)
 
 username=tk.Label(frame,text = "Username", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#FADCD9")
