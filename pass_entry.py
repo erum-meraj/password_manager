@@ -2,7 +2,7 @@ import tkinter as tk
 #import requests # Download this library using pip install request!!!!!!!
 from tkinter import font
 import mysql.connector as sql
-from new_user import user_record_entry
+from signup_new_user import user_record_entry
 from PIL import Image, ImageTk # Download this library using pip install Pillow!!!!!
 
 

@@ -25,7 +25,7 @@ def sign_up_redirect():
 frame = tk.Frame(root, bg="#FADCD9", bd=5)
 frame.place(x=115 , y = 170 , height = 630 , width =450)
 
-background_image= tk.PhotoImage(file=r'/Users/momeraj/Documents/erum/learning-python-master/12th/split_code/image-removebg-preview.png')
+background_image= tk.PhotoImage(file=r'/Users/momeraj/Documents/erum/learning-python-master/12th/split_code/Logo-removebg-preview.png')
 background_label = tk.Label(root, image=background_image, bg = "#FADCD9")
 background_label.place(x=140, y=180, width=400, height=200)
 
