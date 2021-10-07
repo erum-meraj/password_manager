@@ -14,5 +14,6 @@ def user_record_entry(name , passw, mail, cur, con):
             print("registration successful ")
         except :
             print("registration failed ")
-        #con.close();
+    con.close()
+
     return
