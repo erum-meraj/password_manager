@@ -1,10 +1,10 @@
 import tkinter as tk
 from tkinter import font
 import mysql.connector as sql
+
+#user defined functions 
 from log_in_reg_user import user_record_check
 from signup import signup
-from PIL import Image, ImageTk # Download this library using pip install Pillow!!!!!
-
 
 #root app
 root = tk.Tk()

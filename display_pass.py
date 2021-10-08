@@ -37,5 +37,5 @@ def display_table(userid):
 
     sheet1.headers(["website","password","note"])
     sheet1.set_sheet_data(data = data)
-    sheet1.enable_bindings(("single_select","row_select","column_width_resize","arrowkeys","rc_select","copy","cut","paste",))
+    sheet1.enable_bindings(("single_select","row_select","column_width_resize","arrowkeys","rc_select","copy","cut","paste"))
     root.mainloop()
