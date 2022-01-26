@@ -10,6 +10,7 @@ def user_record_entry(name , passw, mail, cur, con):
         query = "INSERT INTO users( username, password, email ) VALUES('{}', '{}', '{}')".format(name_entered, pw_entered, email_entered)
         try:
             cur.execute(query)
+            
             con.commit()
             print("registration successful ")
         except :

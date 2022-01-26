@@ -24,16 +24,17 @@ def pass_entry(usid):
     background_image= tk.PhotoImage(file=r'/Users/momeraj/Documents/erum/learning-python-master/12th/Password-Manager-master/Logo-removebg-preview.png')
     background_label = tk.Label(root, image=background_image, bg = "#d9d9d9")
     background_label.place(x=140, y=180, width=400, height=200)
-
+ 
+ 
 
     welcomeback=tk.Label(frame,text = "NEW PASSWORD", font=("times new roman" , 35 , "bold") , fg = "black", bg = "#d9d9d9")
     welcomeback.place(x=80 , y =250)
 
-    username=tk.Label(frame,text = "Username", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#d9d9d9")
-    username.place(x= 80  , y =320)
+    website=tk.Label(frame,text = "Website", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#d9d9d9")
+    website.place(x= 80  , y =320)
 
-    entry_username = tk.Entry(frame, font=('Bookman Old Style', 18), bg="white", fg="black")
-    entry_username.place(x=80  , y =350 , width = 270)
+    entry_website = tk.Entry(frame, font=('Bookman Old Style', 18), bg="white", fg="black")
+    entry_website.place(x=80  , y =350 , width = 270)
 
     password=tk.Label(frame,text = "Password", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#d9d9d9")
     password.place(x= 80  , y =400)
@@ -49,7 +50,7 @@ def pass_entry(usid):
     entry_note = tk.Entry(frame, font=('Bookman Old Style', 18), bg="white", fg="black")
     entry_note.place(x= 80  , y =510 , width = 270, height= 60)
 
-    button_login = tk.Button(frame, text="Add PW", font=('Bookman Old Style', 14), bg='#ffffff', fg="black" , command=lambda: add_pass_to_db(entry_username.get(), entry_password.get(), entry_note.get(), usid, cur , con))
+    button_login = tk.Button(frame, text="Add PW", font=('Bookman Old Style', 14), bg='#ffffff', fg="black" , command=lambda: add_pass_to_db(entry_website.get(), entry_password.get(), entry_note.get(), usid, cur , con))
     button_login.place(x=155,y=580, height=35, width=120)
 
     root.mainloop()
