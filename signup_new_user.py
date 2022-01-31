@@ -2,6 +2,7 @@ def user_record_entry(name , passw, mail, cur, con):
 
     if name == "" or passw == "" or mail == "":
         print("Pls fill all the details ") 
+        return 0
     else:
         
         name_entered = name
@@ -13,8 +14,8 @@ def user_record_entry(name , passw, mail, cur, con):
             
             con.commit()
             print("registration successful ")
+            return 1
         except :
             print("registration failed ")
+            return 2
     con.close()
-
-    return

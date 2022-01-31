@@ -16,10 +16,6 @@ root.minsize(height=982, width=700)
 con = sql.connect(host = 'localhost', user = 'root', password = 'erummeraj', database = 'pw-manager')
 cur = con.cursor(buffered=True)
 
-#sign_up_redirect_function
-
-
-
 #layout
 frame = tk.Frame(root, bg="#d9d9d9", bd=5)
 frame.place(x=115 , y = 170 , height = 630 , width =450)
