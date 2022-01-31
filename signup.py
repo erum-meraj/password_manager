@@ -5,7 +5,6 @@ def signup():
     import mysql.connector as sql
     from signup_new_user import user_record_entry
 
-
     #root app
     root = tk.Toplevel()
     root.title("Password Manager")
@@ -21,16 +20,14 @@ def signup():
         result = user_record_entry(entry_username.get(), entry_password.get(), entry_email.get(), cur, con)
         print(result)
         if result == 1:
-            succ_image= tk.PhotoImage(file=r'/Users/momeraj/Documents/erum/learning-python-master/12th/split_code my exp/THANK_YOU_FOR_REGISTERING_-removebg-preview.png')
-            succ_label = tk.Label(frame, image=succ_image)
-            succ_label.place(x=0, y=0)
-            print("image added")
+            succ=tk.Label(root,text = "Successful !!", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#d9d9d9")
+            succ.place(x=270 , y =850)
         elif result == 0:
-            incomp=tk.Label(root,text = "fill all details", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#d9d9d9")
-            incomp.place(x= 80  , y =600)
+            incomp=tk.Label(root,text = "Fill all details ", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#d9d9d9")
+            incomp.place(x=270 , y =850)
         else:
-            fail=tk.Label(root,text = "something went wrong", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#d9d9d9")
-            fail.place(x= 80  , y =600)
+            failed=tk.Label(root,text = "Something went wrong ", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#d9d9d9")
+            failed.place(x=270 , y =850)
 
 
 

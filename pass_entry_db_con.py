@@ -11,11 +11,12 @@ def add_pass_to_db(website, passw, note, usid, cur, con):
         query = "INSERT INTO passw( user_id , website , password, descrip ) VALUES('{}', '{}', '{}', '{}')".format(usid, website_entered, pw_entered, note_entered)
         try:
             cur.execute(query)
-            print("query is good")
             con.commit()
             print("registration successful ")
+            return 1
         except :
             print("registration failed ")
+            return 0
     con.close()
 
     return
