@@ -3,7 +3,6 @@
 
 def pass_entry(usid): 
     import tkinter as tk
-    #import requests # Download this library using pip install request!!!!!!!
     from tkinter import font
     import mysql.connector as sql
     from pass_entry_db_con import add_pass_to_db
@@ -21,6 +20,9 @@ def pass_entry(usid):
         if result == 1:
             succ=tk.Label(root,text = "Password Added !!", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#d9d9d9")
             succ.place(x=270 , y =850)
+        elif result == 2:
+            incomp=tk.Label(root,text = "Fill all details !!", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#d9d9d9")
+            incomp.place(x=270 , y =850)
         else:
             failed=tk.Label(root,text = "Something went wrong!!", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#d9d9d9")
             failed.place(x=270 , y =850)
@@ -30,7 +32,7 @@ def pass_entry(usid):
     frame = tk.Frame(root, bg="#d9d9d9", bd=5)
     frame.place(x=115 , y = 170 , height = 630 , width =450)
 
-    background_image= tk.PhotoImage(file=r'/Users/momeraj/Documents/erum/learning-python-master/12th/Password-Manager-master/Logo-removebg-preview.png')
+    background_image= tk.PhotoImage(file=r'/Users/momeraj/Documents/erum/learning-python-master/12th/split_code my exp/Logo-removebg-preview.png')
     background_label = tk.Label(root, image=background_image, bg = "#d9d9d9")
     background_label.place(x=140, y=180, width=400, height=200)
  

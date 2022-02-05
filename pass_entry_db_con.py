@@ -3,6 +3,7 @@ def add_pass_to_db(website, passw, note, usid, cur, con):
     print("hello from the other side")
     if website == "" or passw == "" or note == "":
             print("Pls fill all the details ") 
+            return 2
     else:
         
         website_entered = website

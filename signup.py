@@ -35,7 +35,7 @@ def signup():
     frame = tk.Frame(root, bg="#d9d9d9", bd=5)
     frame.place(x=115 , y = 170 , height = 630 , width =450)
 
-    background_image= tk.PhotoImage(file=r'/Users/momeraj/Documents/erum/learning-python-master/12th/Password-Manager-master/Logo-removebg-preview.png')
+    background_image= tk.PhotoImage(file=r'/Users/momeraj/Documents/erum/learning-python-master/12th/split_code my exp/Logo-removebg-preview.png')
     background_label = tk.Label(root, image=background_image, bg = "#d9d9d9")
     background_label.place(x=140, y=180, width=400, height=200)
 
