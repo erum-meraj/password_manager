@@ -1,3 +1,6 @@
+
+
+
 def display_table(userid):
      
     import tkinter as tk
@@ -6,6 +9,7 @@ def display_table(userid):
     import mysql.connector as sql
     from display_pass_tabledata import check_data
     from pass_entry import pass_entry
+
 
     #root app
     root = tk.Toplevel()
@@ -16,6 +20,16 @@ def display_table(userid):
     #sql connection 
     con = sql.connect(host = 'localhost', user = 'root', password = 'erummeraj', database = 'pw-manager')
     cur = con.cursor(buffered=True)
+    def  table():
+        sheet1 = tksheet.Sheet(frame, width=380, height=160, total_columns=4, show_x_scrollbar=True, show_y_scrollbar=True, theme = "light green")
+        sheet1.place( x = 40, y = 320)
+        data = check_data(userid, cur) 
+
+        sheet1.headers(["website","password","note"])
+        sheet1.set_sheet_data(data = data)
+        sheet1.enable_bindings(("single_select","row_select","column_width_resize","arrowkeys","rc_select","copy","cut","paste", "edit_cell", "rc_insert_row"))
+    
+
 
 
     #layout
@@ -32,14 +46,8 @@ def display_table(userid):
 
     button_login = tk.Button(frame, text="Add new password", font=('Bookman Old Style', 14), bg='#ffffff', fg="black" , command=lambda: pass_entry(userid))
     button_login.place(x=140,y=510, height=35, width= 200)
-    #table
-    sheet1 = tksheet.Sheet(frame, width=380, height=160, total_columns=4, show_x_scrollbar=True, show_y_scrollbar=True, theme = "light green")
-    sheet1.place( x = 40, y = 320)
-    data = check_data(userid, cur) 
+    table()
 
-    sheet1.headers(["website","password","note"])
-    sheet1.set_sheet_data(data = data)
-    sheet1.enable_bindings(("single_select","row_select","column_width_resize","arrowkeys","rc_select","copy","cut","paste", "edit_cell", "rc_insert_row"))
     
-
+    
     root.mainloop()

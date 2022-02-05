@@ -25,6 +25,7 @@ def pass_entry(usid):
             failed=tk.Label(root,text = "Something went wrong!!", font=("times new roman" , 24 , "bold") , fg = "black", bg = "#d9d9d9")
             failed.place(x=270 , y =850)
 
+
     #layout
     frame = tk.Frame(root, bg="#d9d9d9", bd=5)
     frame.place(x=115 , y = 170 , height = 630 , width =450)
